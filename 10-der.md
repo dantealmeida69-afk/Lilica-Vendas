@@ -20,10 +20,18 @@ O diagrama mostra as 9 entidades, seus principais atributos e como se relacionam
 | PEDIDO — MOVIMENTACAO\_ESTOQUE  | 1 : N         | Vendas e cancelamentos geram movimentações ligadas ao pedido.                             |
 | USUARIO — REGISTRO\_USO\_IA     | 1 : N         | Cada usuário pode consultar o assistente várias vezes.                                    |
 
-## 10.3 Como ler o diagrama
+## 10.3 Fluxo principal
 
-* O fluxo principal é **CLIENTE / USUARIO → PEDIDO → ITEM\_PEDIDO ← PRODUTO**.
-* **PAGAMENTO** e **MOVIMENTACAO\_ESTOQUE** derivam do pedido.
-* **CATEGORIA** organiza o catálogo de produtos.
+O fluxo principal da venda é:
 
-🔲 Se o modelo mudar, **substituir a imagem** e registrar a mudança em [09. Modelagem de dados](/broken/pages/b31218f7367387bf70d87d4f005e1730fc311c94).
+**CLIENTE / USUARIO → VENDA → ITEM\_VENDA ← PRODUTO**
+
+Os pagamentos ficam ligados à VENDA.
+
+As encomendas relacionam CLIENTE e PRODUTO.
+
+Os repasses relacionam FORNECEDOR e REPASSE.
+
+## 10.4 Observação para a imagem do DER
+
+A imagem do DER existente no projeto deve ser substituída por uma versão que contenha somente as nove entidades da Entrega 2. Não devem permanecer CATEGORIA, PEDIDO, MOVIMENTACAO\_ESTOQUE ou REGISTRO\_USO\_IA no diagrama desta entrega.[9. Modelagem de dados](/broken/pages/b31218f7367387bf70d87d4f005e1730fc311c94).

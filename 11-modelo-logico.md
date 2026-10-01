@@ -1,118 +1,107 @@
 # 11 modelo logico
 
-Legenda: **PK** = chave primária · **FK** = chave estrangeira · **NN** = não nulo · **UQ** = único
+Legenda: **PK** = chave primária · **FK** = chave estrangeira · **NN** = não nulo · **UQ** = único.
 
-## 11.1 usuario
+## 11.1 USUARIO
 
-| Atributo       | Tipo         | Restrições             |
-| -------------- | ------------ | ---------------------- |
-| id\_usuario    | BIGINT       | PK                     |
-| nome           | VARCHAR(120) | NN                     |
-| email          | VARCHAR(160) | NN, UQ                 |
-| senha\_hash    | VARCHAR(255) | NN                     |
-| perfil         | VARCHAR(10)  | NN; ADMIN ou VENDEDOR  |
-| ativo          | BOOLEAN      | NN, padrão: verdadeiro |
-| data\_cadastro | TIMESTAMPTZ  | NN                     |
+| Atributo    | Tipo         | Restrições |
+| ----------- | ------------ | ---------- |
+| id\_usuario | INT          | PK         |
+| nome        | VARCHAR(120) | NN         |
+| email       | VARCHAR(160) | NN, UQ     |
+| senha       | VARCHAR(255) | NN         |
 
-## 11.2 cliente
+> O conteúdo de `senha` deve ser o hash da senha.
+
+## 11.2 CLIENTE
+
+| Atributo    | Tipo         | Restrições |
+| ----------- | ------------ | ---------- |
+| id\_cliente | INT          | PK         |
+| nome        | VARCHAR(120) | NN         |
+| celular     | VARCHAR(20)  |            |
+| email       | VARCHAR(160) |            |
+| observacoes | VARCHAR(300) |            |
+
+## 11.3 PRODUTO
+
+| Atributo    | Tipo          | Restrições |
+| ----------- | ------------- | ---------- |
+| id\_produto | INT           | PK         |
+| nome        | VARCHAR(120)  | NN         |
+| valor       | DECIMAL(10,2) | NN         |
+| descricao   | TEXT          |            |
+
+## 11.4 VENDA
+
+| Atributo          | Tipo          | Restrições       |
+| ----------------- | ------------- | ---------------- |
+| id\_venda         | INT           | PK               |
+| id\_cliente       | INT           | FK → CLIENTE, NN |
+| id\_usuario       | INT           | FK → USUARIO, NN |
+| data\_venda       | DATE          | NN               |
+| valor\_total      | DECIMAL(10,2) | NN               |
+| status\_pagamento | VARCHAR(30)   | NN               |
+
+## 11.5 ITEM\_VENDA
+
+| Atributo        | Tipo          | Restrições       |
+| --------------- | ------------- | ---------------- |
+| id\_item\_venda | INT           | PK               |
+| id\_venda       | INT           | FK → VENDA, NN   |
+| id\_produto     | INT           | FK → PRODUTO, NN |
+| quantidade      | INT           | NN               |
+| preco\_unitario | DECIMAL(10,2) | NN               |
+| subtotal        | DECIMAL(10,2) | NN               |
+
+## 11.6 PAGAMENTO
+
+| Atributo        | Tipo          | Restrições     |
+| --------------- | ------------- | -------------- |
+| id\_pagamento   | INT           | PK             |
+| id\_venda       | INT           | FK → VENDA, NN |
+| data\_pagamento | DATE          | NN             |
+| valor\_pago     | DECIMAL(10,2) | NN             |
+
+## 11.7 ENCOMENDA
+
+| Atributo        | Tipo        | Restrições       |
+| --------------- | ----------- | ---------------- |
+| id\_encomenda   | INT         | PK               |
+| id\_cliente     | INT         | FK → CLIENTE, NN |
+| id\_produto     | INT         | FK → PRODUTO, NN |
+| quantidade      | INT         | NN               |
+| data\_encomenda | DATE        | NN               |
+| status          | VARCHAR(30) | NN               |
+
+## 11.8 FORNECEDOR
 
 | Atributo       | Tipo         | Restrições |
 | -------------- | ------------ | ---------- |
-| id\_cliente    | BIGINT       | PK         |
+| id\_fornecedor | INT          | PK         |
 | nome           | VARCHAR(120) | NN         |
 | telefone       | VARCHAR(20)  |            |
 | email          | VARCHAR(160) |            |
-| data\_cadastro | TIMESTAMPTZ  | NN         |
 
-## 11.3 categoria
+## 11.9 REPASSE
 
-| Atributo      | Tipo        | Restrições |
-| ------------- | ----------- | ---------- |
-| id\_categoria | BIGINT      | PK         |
-| nome          | VARCHAR(80) | NN, UQ     |
-
-## 11.4 produto
-
-| Atributo        | Tipo          | Restrições             |
-| --------------- | ------------- | ---------------------- |
-| id\_produto     | BIGINT        | PK                     |
-| id\_categoria   | BIGINT        | FK → categoria, NN     |
-| nome            | VARCHAR(120)  | NN                     |
-| descricao       | TEXT          |                        |
-| preco\_venda    | NUMERIC(10,2) | NN, ≥ 0                |
-| estoque\_atual  | INTEGER       | NN, ≥ 0                |
-| estoque\_minimo | INTEGER       | NN, ≥ 0                |
-| ativo           | BOOLEAN       | NN, padrão: verdadeiro |
-
-## 11.5 pedido
-
-| Atributo     | Tipo          | Restrições                               |
-| ------------ | ------------- | ---------------------------------------- |
-| id\_pedido   | BIGINT        | PK                                       |
-| id\_cliente  | BIGINT        | FK → cliente (opcional: venda de balcão) |
-| id\_usuario  | BIGINT        | FK → usuario, NN                         |
-| data\_pedido | TIMESTAMPTZ   | NN                                       |
-| status       | VARCHAR(10)   | NN; ABERTO, PAGO, ENTREGUE ou CANCELADO  |
-| valor\_total | NUMERIC(12,2) | NN, ≥ 0                                  |
-| observacao   | VARCHAR(300)  |                                          |
-
-## 11.6 item\_pedido
-
-| Atributo        | Tipo          | Restrições                                |
-| --------------- | ------------- | ----------------------------------------- |
-| id\_item        | BIGINT        | PK                                        |
-| id\_pedido      | BIGINT        | FK → pedido, NN                           |
-| id\_produto     | BIGINT        | FK → produto, NN; UQ junto com id\_pedido |
-| quantidade      | INTEGER       | NN, > 0                                   |
-| preco\_unitario | NUMERIC(10,2) | NN, ≥ 0                                   |
-| subtotal        | NUMERIC(12,2) | NN; = quantidade × preco\_unitario        |
-
-## 11.7 pagamento
-
-| Atributo        | Tipo          | Restrições                                  |
-| --------------- | ------------- | ------------------------------------------- |
-| id\_pagamento   | BIGINT        | PK                                          |
-| id\_pedido      | BIGINT        | FK → pedido, NN                             |
-| forma           | VARCHAR(10)   | NN; PIX, DINHEIRO, CREDITO, DEBITO ou OUTRO |
-| valor           | NUMERIC(12,2) | NN, > 0                                     |
-| status          | VARCHAR(10)   | NN; PENDENTE, CONFIRMADO ou ESTORNADO       |
-| data\_pagamento | TIMESTAMPTZ   | NN                                          |
-
-## 11.8 movimentacao\_estoque
-
-| Atributo           | Tipo         | Restrições                           |
-| ------------------ | ------------ | ------------------------------------ |
-| id\_movimentacao   | BIGINT       | PK                                   |
-| id\_produto        | BIGINT       | FK → produto, NN                     |
-| id\_pedido         | BIGINT       | FK → pedido (opcional)               |
-| tipo               | VARCHAR(10)  | NN; ENTRADA, SAIDA, ESTORNO ou PERDA |
-| quantidade         | INTEGER      | NN, > 0                              |
-| motivo             | VARCHAR(200) |                                      |
-| data\_movimentacao | TIMESTAMPTZ  | NN                                   |
-
-ENTRADA e ESTORNO **somam** ao estoque; SAIDA e PERDA **subtraem**.
-
-## 11.9 registro\_uso\_ia
-
-| Atributo       | Tipo        | Restrições                                       |
-| -------------- | ----------- | ------------------------------------------------ |
-| id\_registro   | BIGINT      | PK                                               |
-| id\_usuario    | BIGINT      | FK → usuario (opcional)                          |
-| funcionalidade | VARCHAR(20) | NN; RESUMO\_VENDAS, SUGESTAO\_REPOSICAO ou OUTRA |
-| modelo         | VARCHAR(60) | NN                                               |
-| tokens         | INTEGER     | NN, ≥ 0                                          |
-| data\_chamada  | TIMESTAMPTZ | NN                                               |
+| Atributo       | Tipo          | Restrições          |
+| -------------- | ------------- | ------------------- |
+| id\_repasse    | INT           | PK                  |
+| id\_fornecedor | INT           | FK → FORNECEDOR, NN |
+| valor          | DECIMAL(10,2) | NN                  |
+| data\_repasse  | DATE          | NN                  |
+| observacao     | VARCHAR(300)  |                     |
 
 ## 11.10 Chaves estrangeiras
 
-| Tabela filha          | Coluna FK     | Tabela pai |
-| --------------------- | ------------- | ---------- |
-| produto               | id\_categoria | categoria  |
-| pedido                | id\_cliente   | cliente    |
-| pedido                | id\_usuario   | usuario    |
-| item\_pedido          | id\_pedido    | pedido     |
-| item\_pedido          | id\_produto   | produto    |
-| pagamento             | id\_pedido    | pedido     |
-| movimentacao\_estoque | id\_produto   | produto    |
-| movimentacao\_estoque | id\_pedido    | pedido     |
-| registro\_uso\_ia     | id\_usuario   | usuario    |
+| Tabela filha | Coluna FK      | Tabela pai |
+| ------------ | -------------- | ---------- |
+| VENDA        | id\_cliente    | CLIENTE    |
+| VENDA        | id\_usuario    | USUARIO    |
+| ITEM\_VENDA  | id\_venda      | VENDA      |
+| ITEM\_VENDA  | id\_produto    | PRODUTO    |
+| PAGAMENTO    | id\_venda      | VENDA      |
+| ENCOMENDA    | id\_cliente    | CLIENTE    |
+| ENCOMENDA    | id\_produto    | PRODUTO    |
+| REPASSE      | id\_fornecedor | FORNECEDOR |
