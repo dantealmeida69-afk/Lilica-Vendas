@@ -30,4 +30,4 @@ Um sistema centraliza as informações e elimina tarefas repetitivas. Com o Lili
 
 ## 4.3 Importância acadêmica
 
-O projeto integra **qualidade de software**, **modelagem e implementação de banco de dados** e **uso responsável de IA**, com documentação contínua e testes registrados.
+O projeto integra **qualidade de software**, **modelagem e implementação de banco de dados**, com documentação contínua e testes registrados.

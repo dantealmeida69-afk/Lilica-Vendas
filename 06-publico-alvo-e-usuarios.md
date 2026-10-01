@@ -25,12 +25,3 @@
 * interface simples, com poucos passos para concluir uma venda;
 * letras e botões fáceis de ver, com bom contraste;
 * mensagens de erro claras.
-
-## 6.5 Personas
-
-🔲 **RT01/RT02:** transformar os perfis em personas.
-
-| Persona | Perfil        | Dor principal | O que espera do sistema |
-| ------- | ------------- | ------------- | ----------------------- |
-| 🔲      | Administrador | 🔲            | 🔲                      |
-| 🔲      | Vendedor      | 🔲            | 🔲                      |

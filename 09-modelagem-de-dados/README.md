@@ -56,17 +56,30 @@ A evolução ocorre em três níveis:
 
 ## 9.5 Justificativa das decisões de modelagem
 
-A separação entre CLIENTE e USUARIO representa papéis diferentes: o cliente compra ou solicita encomendas, enquanto o usuário opera o sistema e registra as vendas.
+**Cadastro de usuário simplificado:** A tabela USUARIO armazena o nome de acesso e o hash da senha. Seu identificador&#x20;interno permite relacionar o usuário às vendas sem armazenar informações pessoais adicionais.
 
-A entidade ITEM\_VENDA resolve a relação entre VENDA e PRODUTO, permitindo que uma venda tenha vários produtos e que um produto apareça em várias vendas.
+**Separação entre cliente e usuário:** O cliente realiza a compra, enquanto o usuário opera o sistema. Essa separação&#x20;permite identificar o comprador e o responsável pelo registro.
 
-O preço unitário é armazenado no item porque o valor cadastrado no produto pode mudar posteriormente. Dessa forma, o histórico da venda permanece preservado.
+**Um produto por venda:** A tabela VENDA registra diretamente o produto, a quantidade e o preço unitário. Essa decisão&#x20;simplifica a estrutura, limitando cada venda a um produto.
 
-A separação entre VENDA e PAGAMENTO permite registrar pagamentos em diferentes datas e valores, inclusive pagamentos parciais.
+\
+**Preservação do preço da venda:** O preço unitário é armazenado na venda para preservar o histórico, mesmo que o&#x20;valor do produto seja atualizado.\
+\
+**Separação entre venda e pagamento:** Permite registrar pagamentos em diferentes datas e valores e calcular o saldo&#x20;pendente de cada venda.
 
-ENCOMENDA é mantida separada de VENDA porque representa uma solicitação do cliente e seu andamento. No modelo definido no PDF, cada encomenda contém um produto e não possui vínculo direto com uma venda.
+\
+**Separação entre encomenda e venda:** A encomenda registra uma solicitação e seu andamento. O modelo não&#x20;estabelece uma ligação direta entre encomenda e venda.
 
-FORNECEDOR e REPASSE também são separados: o fornecedor é cadastrado uma vez e cada repasse registra um valor e uma data específicos.
+\
+**Separação entre fornecedor e repasse:** Os dados do fornecedor são cadastrados uma única vez. Cada repasse registra&#x20;o valor transferido e a data da operação.
+
+\
+**Uso de chaves e tipos adequados :** As chaves identificam os registros e mantêm seus vínculos. INT é utilizado para&#x20;identificadores e quantidades, VARCHAR para textos curtos, DATE para datas e DECIMAL (10,2) para valores&#x20;monetários.
+
+\
+**Atualização dos valores calculados:** O valor total e o status de pagamento devem acompanhar as alterações nos&#x20;dados da venda e nos pagamentos, evitando divergências.
+
+
 
 ## 9.6 Evolução da modelagem
 

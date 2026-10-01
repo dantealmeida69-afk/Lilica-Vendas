@@ -4,11 +4,11 @@
 
 O **Lilica Vendas** é um sistema web responsivo para pequenos comércios. Ele permite cadastrar produtos e clientes, registrar vendas, controlar o estoque automaticamente, acompanhar pagamentos e consultar relatórios de desempenho.
 
-O diferencial é o **Assistente Lilica**, um recurso de Inteligência Artificial que lê os números do negócio e devolve **resumos em linguagem simples** e **sugestões práticas**, como quais produtos repor e quais tiveram queda de vendas.
+O diferencial é o **Assistente Lilica**, um recurso  que lê os números do negócio e devolve **resumos em linguagem simples** e **sugestões práticas**, como quais produtos repor e quais tiveram queda de vendas.
 
 ## Contexto
 
-O projeto foi desenvolvido na atividade **A3 — IA para o Cotidiano**, da Unidade Curricular **Qualidade de Software**. O trabalho é documentado neste GitBook, do problema até a demonstração para a banca.
+O projeto foi desenvolvido na atividade **A3** da Unidade Curricular **Qualidade de Software**. O trabalho é documentado neste GitBook, do problema até a demonstração para a banca.
 
 ## Como o sistema funciona, em resumo
 
