@@ -2,7 +2,7 @@
 
 ## 5.1 Objetivo geral
 
-Desenvolver um sistema web de gestão de vendas, com banco de dados relacional e apoio de Inteligência Artificial, que organize vendas e estoque de um pequeno comércio e ajude o gestor a tomar melhores decisões.
+Desenvolver um sistema web de gestão de vendas, com banco de dados relacional, que organize vendas e estoque de um pequeno comércio e ajude o gestor a tomar melhores decisões.
 
 ## 5.2 Objetivos específicos
 
@@ -15,4 +15,4 @@ Desenvolver um sistema web de gestão de vendas, com banco de dados relacional e
 7. Oferecer o Assistente Lilica, com resumos e sugestões baseados em dados agregados.
 8. Proteger os dados pessoais dos clientes conforme a LGPD.
 9. Validar o sistema por meio de testes documentados, inclusive os que falharam.
-10. Documentar todo o processo neste GitBook.
+

@@ -2,7 +2,7 @@
 
 ## 3.1 Descrição do problema
 
-Pequenos comerciantes costumam controlar vendas e estoque em **cadernos, mensagens de WhatsApp ou planilhas soltas**. Com isso, não sabem ao certo quanto venderam, o que está acabando nem quais produtos dão mais resultado. 🔲 O grupo deve ajustar este texto à realidade da Lilica.
+Pequenos comerciantes costumam controlar vendas e estoque em **cadernos, mensagens de WhatsApp ou planilhas soltas**. Com isso, não sabem ao certo quanto venderam, o que está acabando nem quais produtos dão mais resultado.&#x20;
 
 O problema é diário e afeta quem vende e quem administra o negócio. As causas mais comuns são a falta de um registro único e a ausência de tempo para analisar os números.
 
@@ -32,12 +32,4 @@ O problema é diário e afeta quem vende e quem administra o negócio. As causas
 
 ## 3.5 Problema ou oportunidade
 
-A proposta resolve o problema da **desorganização das vendas** e aproveita a oportunidade de usar **IA como consultora do pequeno negócio**, explicando os números de forma simples.
-
-## 3.6 Evidências e pesquisa
-
-🔲 **RT01:** registrar a pesquisa feita pelo grupo (entrevista com lojistas, formulário, observação).
-
-| Fonte | Método | Nº de respostas | Principal achado |
-| ----- | ------ | --------------- | ---------------- |
-| 🔲    | 🔲     | 🔲              | 🔲               |
+A proposta resolve o problema da **desorganização das vendas** e aproveita a oportunidade de usar **como consultora do pequeno negócio**, explicando os números de forma simples.

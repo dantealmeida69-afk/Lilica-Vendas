@@ -2,12 +2,12 @@
 
 ## Dados gerais
 
-| Campo                  | Informação                                            |
-| ---------------------- | ----------------------------------------------------- |
-| **Título**             | A3 — IA PARA O COTIDIANO — Lilica Vendas — Grupo 1 nº |
-| **Nome do projeto**    | Lilica Vendas                                         |
-| **Unidade Curricular** | Qualidade de Software                                 |
-| **Área de aplicação**  | Comércio / gestão de vendas                           |
+| Campo                  | Informação                        |
+| ---------------------- | --------------------------------- |
+| **Título**             | A3 --  Lilica Vendas — Grupo 1 nº |
+| **Nome do projeto**    | Lilica Vendas                     |
+| **Unidade Curricular** | Qualidade de Software             |
+| **Área de aplicação**  | Comércio / gestão de vendas       |
 
 ## Integrantes
 
@@ -17,7 +17,7 @@
 | 2  | Dante Almeida Cruz                  | 325120274 |
 | 3  | David Gomes Vieira                  | 325130582 |
 | 4  | Diogo César dos Santos Tavares d    | 325214024 |
-| 5  | Flavio Gabriel Athaide de Oliveira  | 32510419  |
+| 5  | Flavio Gabriel Athaide de Oliveira  | 325144298 |
 | 6  | Gustavo Henrique da Costa Roma      | 325219044 |
 | 7  | João Pedro Penha Lourenço           | 32510419  |
 | 8  | Moisés Lameo Lana                   | 325140886 |
@@ -30,13 +30,13 @@
 
 ## Modelo de colaboração
 
-| Papel                       | Ferramenta                                                      |
-| --------------------------- | --------------------------------------------------------------- |
-| Documentação principal      | GitBook (plano Free: 1 usuário incluído, sem edição simultânea) |
-| Colaboração e versionamento | 🔲 GitHub, conforme modelo definido pelo professor              |
-| Integração                  | 🔲 Git Sync entre GitHub e GitBook                              |
-| Planejamento e cronograma   | 🔲 Google Sheets ou similar                                     |
-|                             |                                                                 |
+| Papel                       | Ferramenta                                      |
+| --------------------------- | ----------------------------------------------- |
+| Documentação principal      | GitBook                                         |
+| Colaboração e versionamento | GitHub, conforme modelo definido pelo professor |
+| Integração                  |  Git Sync entre GitHub e GitBook                |
+| Planejamento e cronograma   | Excel                                           |
+|                             |                                                 |
 
 ### &#x20;Etapas do projeto <a href="#id-2.-etapas-do-projeto" id="id-2.-etapas-do-projeto"></a>
 
