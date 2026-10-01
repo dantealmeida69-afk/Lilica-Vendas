@@ -29,5 +29,3 @@
 * [SUMMARY](summary.md)
 * [README](readme-1.md)
 * [gitbook](gitbook.md)
-* [01 planejamento](01-planejamento/README.md)
-  * [17 testes](01-planejamento/17-testes.md)
