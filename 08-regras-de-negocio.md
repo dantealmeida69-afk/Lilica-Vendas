@@ -28,8 +28,8 @@ Regras que devem ser respeitadas **pelo sistema e pelo Banco de Dados**.
 * Os dados dos clientes (nome, telefone, e-mail) são **dados pessoais** e só devem ser coletados quando necessários para a venda.
 * O acesso é restrito por login e perfil.
 * Senhas são gravadas apenas como **hash**.
-* Nenhum dado pessoal de cliente é enviado ao serviço de IA.
-* 🔲 Definir como o cliente pode solicitar correção ou exclusão de seus dados.
+
+
 
 ## 8.3 Ética no uso da IA
 

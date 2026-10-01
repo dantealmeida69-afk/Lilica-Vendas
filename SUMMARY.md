@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Lilica-Vendas](README.md)
-* [01 identificacao do projeto](01-identificacao-do-projeto.md)
+* [01 Lilica-Vendas](README.md)
 * [02 introducao](02-introducao.md)
 * [03 problema e contexto](03-problema-e-contexto.md)
 * [04 justificativa](04-justificativa.md)
@@ -12,9 +11,9 @@
   * [7.1 requisitos funcionais](07-requisitos-do-sistema/7.1-requisitos-funcionais.md)
   * [README](07-requisitos-do-sistema/readme.md)
 * [08 regras de negocio](08-regras-de-negocio.md)
-* [09 modelagem de dados](09-modelagem-de-dados.md)
-* [10 der](10-der.md)
-* [11 modelo logico](11-modelo-logico.md)
+* [09 modelagem de dados](09-modelagem-de-dados/README.md)
+  * [10 der](09-modelagem-de-dados/10-der.md)
+  * [11 modelo logico](09-modelagem-de-dados/11-modelo-logico.md)
 * [12 implementacao do banco de dados](12-implementacao-do-banco-de-dados.md)
 * [13 povoamento do banco de dados](13-povoamento-do-banco-de-dados.md)
 * [14 desenvolvimento do sistema](14-desenvolvimento-do-sistema.md)
@@ -27,5 +26,5 @@
     * [17 testes](20-conclusao/19-limitacoes-e-melhorias-futuras/17-testes.md)
 * [LEIA ME IMPORTAR](leia-me-importar.md)
 * [SUMMARY](summary.md)
-* [README](readme-1.md)
+* [README](readme.md)
 * [gitbook](gitbook.md)

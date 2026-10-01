@@ -37,7 +37,7 @@ A evolução ocorre em três níveis:
 | PRODUTO — ENCOMENDA   |         1 : N | Um produto pode aparecer em várias encomendas; cada encomenda referencia um único produto. |
 | FORNECEDOR — REPASSE  |         1 : N | Um fornecedor pode receber vários repasses; cada repasse pertence a um único fornecedor.   |
 
-## ![](<.gitbook/assets/image (1).png>)
+## ![](<../.gitbook/assets/image (1).png>)
 
 ## 9.4 Regras de negócio
 
