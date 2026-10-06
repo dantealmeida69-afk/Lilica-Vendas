@@ -14,3 +14,4 @@
 * [09 modelagem de dados](09-modelagem-de-dados/README.md)
   * [10 der](09-modelagem-de-dados/10-der.md)
   * [11 modelo logico](09-modelagem-de-dados/11-modelo-logico.md)
+* [Entrega Segunda Parte](entrega-segunda-parte.md)
